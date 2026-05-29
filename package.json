@@ -1,6 +1,6 @@
 {
   "name": "@enyaencha/esm-ai-chart-assistant-app",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "AI chart assistant microfrontend for the OpenMRS SPA",
   "keywords": [
     "openmrs",
