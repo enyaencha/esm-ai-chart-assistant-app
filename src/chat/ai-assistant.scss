@@ -1,0 +1,244 @@
+.aiAssistantTopNavButton {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 600;
+  height: 3rem;
+  justify-content: center;
+  min-width: 3rem;
+}
+
+.aiAssistantFloatingButton {
+  align-items: center;
+  background: #00756b;
+  border: 0;
+  border-radius: 50%;
+  bottom: 2rem;
+  box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 24%);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  height: 3.5rem;
+  justify-content: center;
+  position: fixed;
+  right: 4.75rem;
+  width: 3.5rem;
+  z-index: 8000;
+}
+
+.aiAssistantPanel {
+  background: #f4f4f4;
+  border: 1px solid #c6c6c6;
+  bottom: 5.75rem;
+  box-shadow: 0 0.75rem 2rem rgb(0 0 0 / 22%);
+  display: none;
+  flex-direction: column;
+  max-height: min(42rem, calc(100vh - 7rem));
+  min-height: 24rem;
+  min-width: 22rem;
+  overflow: hidden;
+  position: fixed;
+  resize: both;
+  right: 4.75rem;
+  width: min(28rem, calc(100vw - 2rem));
+  z-index: 8001;
+}
+
+.aiAssistantPanel[data-open='true'] {
+  display: flex;
+}
+
+.aiAssistantHeader {
+  align-items: center;
+  background: #004d45;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  min-height: 4rem;
+  padding: 0.75rem 1rem;
+}
+
+.aiAssistantHeader div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.aiAssistantHeader span {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.aiAssistantHeader b[data-state='connected'] {
+  color: #42be65;
+}
+
+.aiAssistantHeader b[data-state='offline'] {
+  color: #f1c21b;
+}
+
+.aiAssistantHeader button {
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.aiAssistantChips {
+  border-bottom: 1px solid #d0d0d0;
+  display: flex;
+  gap: 0.5rem;
+  min-height: 3.5rem;
+  overflow-x: auto;
+  padding: 0.75rem;
+}
+
+.aiAssistantChips button,
+.aiAssistantComposer button {
+  background: #00756b;
+  border: 1px solid #00756b;
+  color: #ffffff;
+  cursor: pointer;
+  min-height: 2.25rem;
+  padding: 0.35rem 0.75rem;
+  white-space: nowrap;
+}
+
+.aiAssistantChips button {
+  background: #ffffff;
+  color: #161616;
+  border-color: #8d8d8d;
+}
+
+.aiAssistantMessages {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+  padding: 0.75rem;
+}
+
+.aiAssistantMessages h4,
+.aiAssistantMessages h5,
+.aiAssistantMessages p,
+.aiAssistantMessages li,
+.aiAssistantMessages small {
+  overflow-wrap: anywhere;
+}
+
+.aiAssistantMessage,
+.aiAssistantUserMessage,
+.aiAssistantThinking {
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+  color: #161616;
+  line-height: 1.45;
+  padding: 0.75rem;
+}
+
+.aiAssistantUserMessage {
+  background: #00756b;
+  border-color: #00756b;
+  color: #ffffff;
+  margin-left: 2rem;
+}
+
+.aiAssistantMessage h4,
+.aiAssistantMessage h5,
+.aiAssistantMessage p {
+  margin: 0 0 0.5rem;
+}
+
+.aiAssistantMessage h4 {
+  font-size: 1rem;
+}
+
+.aiAssistantMessage h5 {
+  font-size: 0.875rem;
+}
+
+.aiAssistantSection {
+  margin-top: 0.75rem;
+}
+
+.aiAssistantMessage ol,
+.aiAssistantMessage ul {
+  margin: 0.25rem 0 0.75rem 1.25rem;
+  padding: 0;
+}
+
+.aiAssistantSources {
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-top: 0.5rem;
+}
+
+.aiAssistantSuggestions {
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.aiAssistantSuggestions span {
+  color: #525252;
+  flex-basis: 100%;
+  font-size: 0.75rem;
+}
+
+.aiAssistantSuggestions button {
+  background: #ffffff;
+  border: 1px solid #8d8d8d;
+  color: #161616;
+  cursor: pointer;
+  font-size: 0.875rem;
+  min-height: 2rem;
+  padding: 0.25rem 0.5rem;
+  text-align: left;
+}
+
+.aiAssistantSources span {
+  color: #525252;
+  font-size: 0.75rem;
+}
+
+.aiAssistantComposer {
+  border-top: 1px solid #d0d0d0;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem;
+}
+
+.aiAssistantComposer textarea {
+  flex: 1;
+  min-height: 2.5rem;
+  padding: 0.5rem;
+  resize: vertical;
+}
+
+@media (max-width: 48rem) {
+  .aiAssistantPanel {
+    bottom: 0;
+    max-height: calc(100vh - 3rem);
+    min-width: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 9101;
+  }
+
+  .aiAssistantFloatingButton {
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 9100;
+  }
+}

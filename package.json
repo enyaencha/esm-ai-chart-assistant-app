@@ -1,0 +1,87 @@
+{
+  "name": "@enyaencha/esm-ai-chart-assistant-app",
+  "version": "0.1.14",
+  "description": "AI chart assistant microfrontend for the OpenMRS SPA",
+  "keywords": [
+    "openmrs",
+    "kenyaemr",
+    "ai",
+    "assistant"
+  ],
+  "homepage": "https://github.com/enyaencha/esm-ai-chart-assistant-app#readme",
+  "bugs": {
+    "url": "https://github.com/enyaencha/esm-ai-chart-assistant-app/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enyaencha/esm-ai-chart-assistant-app.git"
+  },
+  "author": "enyaencha",
+  "license": "MPL-2.0",
+  "main": "src/index.ts",
+  "source": true,
+  "browser": "dist/enm-esm-ai-chart-assistant-app.js",
+  "files": [
+    "dist",
+    "src",
+    "translations"
+  ],
+  "scripts": {
+    "analyze": "webpack --mode=production --env.analyze=true",
+    "build": "webpack --mode=production",
+    "debug": "npm run serve",
+    "lint": "eslint src --ext ts,tsx",
+    "prepublishOnly": "npm run build && npm run typescript",
+    "serve": "webpack-dev-server --mode=development",
+    "start": "openmrs develop",
+    "typescript": "tsc"
+  },
+  "browserslist": [
+    "extends browserslist-config-openmrs"
+  ],
+  "peerDependencies": {
+    "@carbon/react": "1.x",
+    "@openmrs/esm-framework": "9.x",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-i18next": "16.x",
+    "react-router-dom": "6.x"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.24.0",
+    "@babel/preset-typescript": "^7.24.0",
+    "@carbon/react": "1.92.1",
+    "@openmrs/esm-framework": "9.0.2",
+    "@react-aria/utils": "^3.34.0",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.1",
+    "@types/webpack-env": "^1.16.0",
+    "ajv": "^8.20.0",
+    "babel-loader": "^9.1.3",
+    "browserslist-config-openmrs": "^1.0.1",
+    "css-loader": "^6.6.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-config-ts-react-important-stuff": "^3.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "html-webpack-plugin": "^5.6.0",
+    "openmrs": "9.0.2",
+    "prettier": "^2.2.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-i18next": "16.0.0",
+    "react-router-dom": "^6.3.0",
+    "sass": "^1.54.3",
+    "sass-loader": "^13.3.3",
+    "style-loader": "^3.3.4",
+    "typescript": "^5.0.0",
+    "webpack": "5.99.9",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
